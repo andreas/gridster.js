@@ -288,11 +288,11 @@
                 ((size_y - 1) * this.options.widget_margins[1]) * 2)
         });
 
-        if (size_y > old_size_y) {
+        if (this.rows < wgd.row + wgd.size_y - 1) {
             this.add_faux_rows(size_y - old_size_y);
         }
 
-        if (size_x > old_size_x) {
+        if (this.cols < wgd.col + wgd.size_x - 1) {
             this.add_faux_cols(size_x - old_size_x);
         }
 
