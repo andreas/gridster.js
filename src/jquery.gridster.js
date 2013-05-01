@@ -320,6 +320,8 @@
             this.remove_empty_cells.apply(this, rows_to_remove_holes);
         }
 
+        this.move_widget_up($widget, wgd.row)
+
         return $widget;
     };
 
