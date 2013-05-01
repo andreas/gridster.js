@@ -2432,10 +2432,9 @@
     * @return {Object} Returns the instance of the Gridster class.
     */
     fn.add_faux_cols = function(cols) {
-        var actual_cols = this.cols;
-        var max_cols = actual_cols + (cols || 1);
+        var max_cols = this.cols + (cols || 1);
 
-        for (var c = actual_cols; c < max_cols; c++) {
+        for (var c = this.cols+1; c <= max_cols; c++) {
             for (var r = this.rows; r >= 1; r--) {
                 this.add_faux_cell(r, c);
             }
