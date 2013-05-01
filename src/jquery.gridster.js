@@ -2524,7 +2524,8 @@
                 this.cols = max_cols;
             }
         }
-        this.rows = Math.max(max_rows, this.options.min_rows);
+        this.rows = Math.min(this.options.max_rows,
+                             Math.max(max_rows, this.options.min_rows));
 
         this.baseX = ($(window).width() - aw) / 2;
         this.baseY = this.$wrapper.offset().top;
